@@ -54,7 +54,7 @@ Develop the frontend for a workflow automation system that allows users to visua
    - Implement the functionality to drag nodes from this list into the workflow canvas.
 
 3. **Workflow Canvas Setup**:
-   - Integrate `react-flow-renderer` to set up a canvas where nodes can be placed and interconnected.
+   - Integrate `react-flow` to set up a canvas where nodes can be placed and interconnected.
    - Customize node appearance based on their type using custom node renderers.
 
 4. **Node Modification Panel**:
