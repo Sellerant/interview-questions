@@ -48,7 +48,6 @@ Develop the frontend for a workflow automation system that allows users to visua
 #### Development Steps:
 1. **Setup Project**:
    - Initialize a new React project using Create React App.
-   - Install necessary npm packages (`react-dnd`, `react-flow-renderer`, `redux`, `styled-components`).
 
 2. **Node List Implementation**:
    - Create a component to list available node types.
