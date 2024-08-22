@@ -8,10 +8,10 @@ Welcome to the server-side technical interview for our Workflow Automation Syste
 
 We'll be working on creating a backend API that supports the following key functionalities:
 1. Workflow management (CRUD operations)
-2. Node type definitions and management
-3. Workflow execution engine
+2. Node type definitions and management, including conditional nodes and external update nodes
+3. Workflow execution engine with support for branching logic
 4. Data processing and storage
-5. Integration with external APIs
+5. Integration with external APIs (e.g., Salesforce)
 
 ## Interview Format
 
@@ -38,46 +38,68 @@ We'll be working on creating a backend API that supports the following key funct
    - Clarify any questions about the project requirements
    - Explore potential challenges and discuss possible solutions
    - Make key architecture decisions (e.g., synchronous vs asynchronous processing, stateless vs stateful design)
-   - Discuss integration points with the frontend and any external systems
+   - Discuss integration points with the frontend and external systems like Salesforce
 
-2. **API Design (15-20 minutes)**
+2. **API Design (20-25 minutes)**
    - Design RESTful API endpoints for workflow and node CRUD operations
-   - Discuss authentication and authorization strategies
    - Plan endpoints for workflow execution and status monitoring
+   - Discuss authentication and authorization strategies
+   - Design endpoints for managing conditional nodes and external update nodes
 
-3. **Data Model Design (10-15 minutes)**
-   - Design the data model for workflows, nodes, and execution results
+3. **Data Model Design (15-20 minutes)**
+   - Design the data model for workflows, nodes (including conditional and external update nodes), and execution results
    - Discuss database choice and schema design
+   - Plan for storing external API credentials securely
 
-4. **Core Implementation (45-60 minutes)**
+4. **Core Implementation (50-60 minutes)**
    - Set up the project and basic server structure
    - Implement key API endpoints (e.g., create workflow, add node, execute workflow)
    - Create a basic workflow execution engine
+   - Implement conditional node logic (e.g., checking if region is East Coast)
+   - Develop a system for external API calls (e.g., creating a record in Salesforce)
 
-5. **Advanced Features (if time permits) (20-30 minutes)**
-   - Implement branching logic in the workflow execution engine
+5. **Advanced Features (if time permits) (25-35 minutes)**
+   - Implement more complex branching logic in the workflow execution engine
    - Design a plugin system for custom node types
    - Develop a caching strategy for frequently accessed workflows
+   - Implement error handling and retry mechanisms for external API calls
 
-6. **Testing and Documentation (15-20 minutes)**
-   - Write unit tests for critical components (e.g., workflow execution engine)
+6. **Testing and Documentation (20-25 minutes)**
+   - Write unit tests for critical components (e.g., workflow execution engine, conditional nodes)
    - Document API endpoints and usage
+   - Create sample workflows demonstrating conditional nodes and external updates
 
-7. **Scalability Discussion (10-15 minutes)**
+7. **Scalability Discussion (15-20 minutes)**
    - Discuss strategies for horizontal scaling
    - Consider options for handling long-running workflows
    - Explore potential bottlenecks and solutions
+   - Discuss strategies for rate limiting and respecting external API quotas
 
 ## Evaluation Criteria
 
 1. **Requirements Understanding**: Ability to ask relevant questions and make informed architecture decisions
-2. **API Design**: Clarity, RESTfulness, and completeness of the API design
+2. **API Design**: Clarity, RESTfulness, and completeness of the API design, including support for advanced node types
 3. **Code Quality**: Readability, structure, and adherence to best practices
-4. **Problem-Solving**: Approach to challenges and ability to break down complex problems
-5. **Database Design**: Appropriate schema design and database choice
-6. **Scalability Considerations**: Understanding of potential scaling issues and solutions
-7. **Testing Approach**: Quality and coverage of unit tests
-8. **Documentation**: Clarity and completeness of API documentation
-9. **Communication**: Ability to explain design choices and trade-offs
+4. **Problem-Solving**: Approach to challenges and ability to break down complex problems, especially regarding conditional logic and external integrations
+5. **Database Design**: Appropriate schema design and database choice, considering the needs of advanced workflow features
+6. **Scalability Considerations**: Understanding of potential scaling issues and solutions, particularly for workflows with external dependencies
+7. **Testing Approach**: Quality and coverage of unit tests, including edge cases for conditional nodes
+8. **Documentation**: Clarity and completeness of API documentation and sample workflows
+9. **Communication**: Ability to explain design choices and trade-offs, especially regarding integration with external systems
+
+## Specific Example Scenario
+
+During the interview, we'll work on implementing a workflow with the following requirements:
+
+1. The workflow starts with a "New Lead" node that receives lead data, including the lead's region.
+2. A conditional node checks if the region is "East Coast".
+3. If the region is East Coast:
+   - An "External Update" node is triggered to create a record in Salesforce for the Account Manager assigned to the East Coast.
+   - The Salesforce API call should include error handling and retries.
+4. If the region is not East Coast:
+   - The lead is assigned to a general pool for further processing.
+5. The workflow ends with a "Notification" node that sends an email about the new lead and its assignment.
+
+This scenario will allow you to demonstrate your ability to handle conditional logic, integrate with external APIs, and manage complex workflows.
 
 Remember, the goal is not necessarily to complete every aspect of the system but to demonstrate your thought process, problem-solving skills, and ability to create robust and scalable backend solutions. Good luck!
