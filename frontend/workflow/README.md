@@ -9,7 +9,7 @@ We'll work together on a small project designed to fit within our interview time
 This will be a collaborative effort. You will pair with one of our engineers who will act both as a teammate and an evaluator. You’re encouraged to discuss your strategies, ask questions, and leverage your collaborator's experience.
 
 #### 3. **Resources**
-Feel free to use any online resources you need, including Google and ChatGPT. These tools are part of the modern developer's toolkit, and knowing how to use them effectively is crucial.
+Feel free to use any online resources you need, including Google and ChatGPT/Claude. These tools are part of the modern developer's toolkit, and knowing how to use them effectively is crucial.
 
 #### 4. **Understanding and Implementation**
 It’s essential that you understand any code you choose to use—whether it’s written from scratch, borrowed from a stack overflow page, or suggested by ChatGPT. You will need to explain your implementation choices, including how and why your solution works.
@@ -25,7 +25,7 @@ This interview is designed to be an engaging way for you to demonstrate your pra
 ### Project Description: Frontend for Workflow Automation System
 
 #### Objective:
-Develop the frontend for a workflow automation system that allows users to visually manage automation workflows, specifically focusing on tasks related to sales lead management.
+Develop the frontend/basic backend for a workflow automation system that allows users to visually manage automation workflows, specifically focusing on tasks related to sales lead management.
 
 #### Screenshots
 
@@ -38,16 +38,13 @@ Develop the frontend for a workflow automation system that allows users to visua
 **1. Frontend Functionality:**
    - **Node Management**:
      - **Adding New Nodes**: Implement a UI component that allows users to select and add different types of nodes (e.g., data fetch, data process, API call) from a predefined list.
-     - **Rendering Nodes**: Each type of node should be rendered differently based on its functionality (e.g., different icons, colors, shapes) to easily distinguish between them.
+     - **Rendering Nodes**: Each type of node should be rendered differently based on its functionality (e.g., title) to easily distinguish between them.
      - **Modifying Nodes**: Clicking on a node should open a node-specific panel where users can modify properties of the node such as API endpoints, parameters, etc.
-
-   - **Workflow Visualization**:
-     - **Branching Nodes**: Implement a way to visually represent branching logic in the workflow where a node can lead to multiple paths based on certain conditions.
-     - **Interactive Canvas**: Use a draggable canvas area where nodes can be moved around and arranged to form a logical flow.
+     - **Basic Saving Commands in YAML File**: Want to maintain state of workflow so when we add, delete, or update nodes changes persist
 
 #### Development Steps:
 1. **Setup Project**:
-   - Initialize a new React project using Create React App.
+   - Initialize a new React project using Vite (npm create vite@latest my-react-app --template react).
 
 2. **Node List Implementation**:
    - Create a component to list available node types.
@@ -65,11 +62,5 @@ Develop the frontend for a workflow automation system that allows users to visua
    - Design a method to visually display conditional branches from nodes.
    - Allow users to add condition paths and link them to different node types.
 
-6. **Testing and Debugging**:
-   - Test the application for usability and functionality.
-   - Ensure that the application is responsive and nodes are rendered appropriately on all devices.
-
-7. **Documentation**:
-   - Write comprehensive documentation on how to use the frontend, including how to add, configure, and connect nodes.
 
 This frontend setup will empower users to create and manage complex workflows visually and interactively, enhancing the user experience and providing powerful tools for workflow automation.
