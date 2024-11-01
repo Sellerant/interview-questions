@@ -40,7 +40,10 @@ Develop the frontend/basic backend for a workflow automation system that allows 
      - **Adding New Nodes**: Implement a UI component that allows users to select and add different types of nodes (e.g., data fetch, data process, API call) from a predefined list.
      - **Rendering Nodes**: Each type of node should be rendered differently based on its functionality (e.g., title) to easily distinguish between them.
      - **Modifying Nodes**: Clicking on a node should open a node-specific panel where users can modify properties of the node such as API endpoints, parameters, etc.
-     - **Basic REST Commands into YAML File**: Want to maintain state of workflow so when we add, delete, or update nodes changes persist
+     - **Basic Object Handling for Persistance**: Implement 3 functions:
+         - `save()` that saves the workflow configuration based on workflow name to the current directory
+         - `load()` that looks for the file based on name and restores the workflow in the UI
+         - `describe()` that takes in the workflow name and prints the list of components and the date the workflow/file was created
 
 #### Development Steps:
 1. **Setup Project**:
