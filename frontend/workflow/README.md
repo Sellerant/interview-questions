@@ -40,7 +40,7 @@ Develop the frontend/basic backend for a workflow automation system that allows 
      - **Adding New Nodes**: Implement a UI component that allows users to select and add different types of nodes (e.g., data fetch, data process, API call) from a predefined list.
      - **Rendering Nodes**: Each type of node should be rendered differently based on its functionality (e.g., title) to easily distinguish between them.
      - **Modifying Nodes**: Clicking on a node should open a node-specific panel where users can modify properties of the node such as API endpoints, parameters, etc.
-     - **Basic Saving Commands in YAML File**: Want to maintain state of workflow so when we add, delete, or update nodes changes persist
+     - **Basic REST Commands into YAML File**: Want to maintain state of workflow so when we add, delete, or update nodes changes persist
 
 #### Development Steps:
 1. **Setup Project**:
@@ -51,7 +51,7 @@ Develop the frontend/basic backend for a workflow automation system that allows 
    - Implement the functionality to drag nodes from this list into the workflow canvas.
 
 3. **Workflow Canvas Setup**:
-   - Integrate `reactflow` to set up a canvas where nodes can be placed and interconnected.
+   - Integrate <https://reactflow.dev>[`reactflow`] to set up a canvas where nodes can be placed and interconnected.
    - Customize node appearance based on their type using custom node renderers.
 
 4. **Node Modification Panel**:
