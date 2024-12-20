@@ -13,6 +13,10 @@ Transform this into a node/edge representation suitable for a workflow visualiza
 
 Take a peek at https://reactflow.dev/examples to get an idea of how the front end might render a workflow.
 
+Here are screenshots of the workflow that the actions.json should create:
+(wf1.png)
+(wf2.png)
+
 ## Step 2:
 Write a workflow deserializer that turns a flow representation from step 1 and creates an executable file. Each node can be a function that just prints some info about it.
 
